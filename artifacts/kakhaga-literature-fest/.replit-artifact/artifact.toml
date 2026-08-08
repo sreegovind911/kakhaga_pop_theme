@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Kakhaga Literature Fest 2027"
+description = "A vibrant Kerala-inspired indie literature festival website for Kakhaga 2027, with festival storytelling, ticket booking, registrations, program schedule, speakers, stalls, partners, gallery, media, and contact information."
+version = "1.0.0"
+id = "artifacts/kakhaga-literature-fest"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18194
+
+[services.development]
+run = "pnpm --filter @workspace/kakhaga-literature-fest run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kakhaga-literature-fest", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kakhaga-literature-fest/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18194"
+BASE_PATH = "/"
