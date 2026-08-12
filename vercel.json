@@ -1,13 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm --filter @workspace/kakhaga-literature-fest run build",
-  "outputDirectory": "artifacts/kakhaga-literature-fest/dist/public",
-  "installCommand": "pnpm install",
-  "framework": "vite",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "cleanUrls": true
 }

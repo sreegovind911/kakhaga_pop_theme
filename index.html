@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kakhaga Literature Fest 2027 · Alappuzha, Kerala</title>
+  <meta name="description" content="A spirited gathering of Malayalam letters, coastal journeys, oral storytelling and independent books in Alappuzha, Kerala." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Native Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="top" class="festival-app">
+
+    <!-- Masthead / Navigation -->
+    <header class="masthead">
+      <div class="nav-container">
+        <button data-testid="button-logo" id="button-logo" class="logo-button">
+          <img src="assets/image_copy_1786202217330.png" alt="Kakhaga logo" class="logo-img" />
+          <span class="logo-text">Kakhaga<br /><i>Literature Fest</i></span>
+        </button>
+        
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+          <button data-testid="link-about" data-target="about" class="nav-link">The fest</button>
+          <button data-testid="link-program" data-target="program" class="nav-link">Program</button>
+          <button data-testid="link-speakers" data-target="speakers" class="nav-link">Voices</button>
+          <button data-testid="link-fair" data-target="fair" class="nav-link">Book fair</button>
+          <button data-testid="link-membership" data-target="membership" class="nav-link">Belong</button>
+          <button data-testid="link-gallery" data-target="gallery" class="nav-link">Field notes</button>
+        </nav>
+
+        <div class="nav-actions">
+          <button data-testid="button-nav-ticket" data-modal="ticket" class="button-primary">
+            <i data-lucide="ticket"></i>
+            <span class="desktop-only">Book a ticket</span>
+            <span class="mobile-only">Tickets</span>
+          </button>
+          <button data-testid="button-mobile-menu" id="button-mobile-menu" class="mobile-menu-btn" aria-label="Toggle menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+          <div class="hero-text-area">
+            <p class="eyebrow reveal reveal-delay-1 text-blue">Alappuzha, Kerala · 07—09 February 2027</p>
+            <h1 id="hero-title" class="font-display reveal hero-title">
+              Kakhaga<br />
+              <span class="outline-text">Literature</span><br />
+              <span class="text-yellow">Fest.</span>
+            </h1>
+            <p class="reveal reveal-delay-1 hero-subtext">
+              A spirited gathering of Malayalam letters, coastal journeys, oral storytelling and the independent books that keep us curious.
+            </p>
+            <div class="reveal reveal-delay-2 hero-btn-group">
+              <button data-testid="button-hero-ticket" data-modal="ticket" class="button-primary">
+                Come for the stories <i data-lucide="arrow-down-right"></i>
+              </button>
+              <button data-testid="button-hero-program" data-target="program" class="button-secondary scroll-btn">
+                See the programme
+              </button>
+            </div>
+          </div>
+
+          <div class="poster-stack reveal reveal-delay-2" aria-label="Festival poster artwork">
+            <span class="poster-tape"></span>
+            <img src="assets/INDIE_1786201107738.png" alt="Indie festival poster collage" class="poster-img poster-shadow" />
+            <div class="poster-badge">
+              <p class="badge-text">
+                A festival for<br />
+                the underlined,<br />
+                dog-eared &<br />
+                passed-around.
+              </p>
+            </div>
+            <img src="assets/image_copy_1786202217330.png" alt="Kakhaga mark" class="poster-seal" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Announcement Marquee -->
+      <div class="marquee" aria-label="Festival announcement">
+        <div class="marquee-track">
+          <span class="marquee-item">Letters in the rain <span aria-hidden="true">/</span></span>
+          <span class="marquee-item">Kadal · Kayal · Pandal <span aria-hidden="true">/</span></span>
+          <span class="marquee-item">Read something aloud <span aria-hidden="true">/</span></span>
+          <span class="marquee-item">Small books, big weather <span aria-hidden="true">/</span></span>
+          <span class="marquee-item">07—09 February 2027 <span aria-hidden="true">/</span></span>
+          <!-- Duplicate for continuous scroll -->
+          <span class="marquee-item">Letters in the rain <span aria-hidden="true">/</span></span>
+          <span class="marquee-item">Kadal · Kayal · Pandal <span aria-hidden="true">/</span></span>
+          <span class="marquee-item">Read something aloud <span aria-hidden="true">/</span></span>
+          <span class="marquee-item">Small books, big weather <span aria-hidden="true">/</span></span>
+          <span class="marquee-item">07—09 February 2027 <span aria-hidden="true">/</span></span>
+        </div>
+      </div>
+
+      <!-- 01 / About Section -->
+      <section id="about" class="section-shell grid-about">
+        <div>
+          <p class="eyebrow">01 / The invitation</p>
+          <h2 class="section-title">Come as you are.<br /><span class="text-pink">Leave with a story.</span></h2>
+        </div>
+        <div class="about-description">
+          <p>Kakhaga is a three-day literary gathering in the old waterways of Alappuzha. Not a conference. Not a book launch marathon. A place to wander into a conversation, hear a poem from the next room, and find a book that feels like it was waiting for you.</p>
+          <p>We bring Malayalam’s deep, generous literary culture into an unruly conversation with translators, publishers, performers, illustrators and readers from everywhere.</p>
+          <button data-testid="button-about-read" data-target="committee" class="scroll-link-btn group text-pink">
+            Meet the people behind it <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- 02 / Committee Section -->
+      <section id="committee" class="bg-pink text-cream">
+        <div class="section-shell grid-committee">
+          <div>
+            <p class="eyebrow text-yellow">02 / The people</p>
+            <h2 class="section-title">Made by<br /><i>many hands.</i></h2>
+            <p class="committee-subtext">A festival is a temporary city. Ours is built by readers, neighbours, printers, cooks, boat people and believers.</p>
+          </div>
+          <div class="committee-grid">
+            <div class="committee-card">
+              <span class="card-num">01</span>
+              <h3 class="font-display">Asha Menon</h3>
+              <p class="card-role">Festival director</p>
+            </div>
+            <div class="committee-card">
+              <span class="card-num">02</span>
+              <h3 class="font-display">Nikhil K. P.</h3>
+              <p class="card-role">Programme & partnerships</p>
+            </div>
+            <div class="committee-card">
+              <span class="card-num">03</span>
+              <h3 class="font-display">Sreedevi Ravi</h3>
+              <p class="card-role">Malayalam curation</p>
+            </div>
+            <div class="committee-card">
+              <span class="card-num">04</span>
+              <h3 class="font-display">Firoz M. Shakir</h3>
+              <p class="card-role">Design & visual identity</p>
+            </div>
+            <div class="committee-card">
+              <span class="card-num">05</span>
+              <h3 class="font-display">Rohit Varma</h3>
+              <p class="card-role">Production & access</p>
+            </div>
+            <div class="committee-card">
+              <span class="card-num">06</span>
+              <h3 class="font-display">You</h3>
+              <p class="card-role">Volunteer / future friend</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 / Speakers Section -->
+      <section id="speakers" class="section-shell">
+        <div class="section-header-row">
+          <div>
+            <p class="eyebrow">03 / Voices</p>
+            <h2 class="section-title">People worth<br /><span class="text-pink">leaning in for.</span></h2>
+          </div>
+          <p class="header-subtext">Writers, translators, artists and listeners. More names are arriving by boat.</p>
+        </div>
+
+        <div class="speakers-grid">
+          <article data-testid="card-speaker-0" class="speaker-card pink-card">
+            <div class="card-top"><span class="card-num">01</span><i data-lucide="arrow-up-right"></i></div>
+            <div class="speaker-avatar">KM</div>
+            <div class="speaker-bottom">
+              <p class="speaker-role">Writer · Kochi</p>
+              <h3 class="font-display speaker-name">K. R. Meera</h3>
+              <p class="speaker-note">The shape of a sentence after the rain.</p>
+            </div>
+          </article>
+
+          <article data-testid="card-speaker-1" class="speaker-card yellow-card">
+            <div class="card-top"><span class="card-num">02</span><i data-lucide="arrow-up-right"></i></div>
+            <div class="speaker-avatar">SH</div>
+            <div class="speaker-bottom">
+              <p class="speaker-role">Writer · Kuttanad</p>
+              <h3 class="font-display speaker-name">S. Hareesh</h3>
+              <p class="speaker-note">Myths travel further when we read them aloud.</p>
+            </div>
+          </article>
+
+          <article data-testid="card-speaker-2" class="speaker-card blue-card">
+            <div class="card-top"><span class="card-num">03</span><i data-lucide="arrow-up-right"></i></div>
+            <div class="speaker-avatar">AN</div>
+            <div class="speaker-bottom">
+              <p class="speaker-role">Author · Mumbai</p>
+              <h3 class="font-display speaker-name">Anita Nair</h3>
+              <p class="speaker-note">A room of one’s own, with a window to the coast.</p>
+            </div>
+          </article>
+
+          <article data-testid="card-speaker-3" class="speaker-card coral-card">
+            <div class="card-top"><span class="card-num">04</span><i data-lucide="arrow-up-right"></i></div>
+            <div class="speaker-avatar">MM</div>
+            <div class="speaker-bottom">
+              <p class="speaker-role">Writer · Mayyazhi</p>
+              <h3 class="font-display speaker-name">M. Mukundan</h3>
+              <p class="speaker-note">Every city keeps a secret in its margins.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 04 / Program Section -->
+      <section id="program" class="bg-ink text-cream">
+        <div class="section-shell">
+          <div class="section-header-row">
+            <div>
+              <p class="eyebrow text-blue">04 / The day</p>
+              <h2 class="section-title">A day with<br /><span class="text-yellow">three currents.</span></h2>
+            </div>
+            <div class="stage-pills" id="stage-filter-group">
+              <span class="stage-pill bg-pink filter-pill" data-stage="PANDAL">PANDAL</span>
+              <span class="stage-pill bg-blue text-ink filter-pill" data-stage="KAYAL">KAYAL</span>
+              <span class="stage-pill bg-yellow text-ink filter-pill" data-stage="KADAL">KADAL</span>
+              <span class="stage-pill bg-cream text-ink filter-pill active" data-stage="ALL">ALL</span>
+            </div>
+          </div>
+
+          <div class="schedule-list" id="schedule-list">
+            <article data-testid="row-schedule-0" class="schedule-row" data-stage="PANDAL">
+              <time class="schedule-time">09:30</time>
+              <div>
+                <h3 class="font-display schedule-title">Doors open: chai, zines & a slow morning</h3>
+                <p class="schedule-speaker">Courtyard</p>
+              </div>
+              <span class="stage-tag bg-yellow">PANDAL</span>
+            </article>
+
+            <article data-testid="row-schedule-1" class="schedule-row" data-stage="PANDAL">
+              <time class="schedule-time">10:30</time>
+              <div>
+                <h3 class="font-display schedule-title">The village is a library</h3>
+                <p class="schedule-speaker">K. R. Meera · S. Hareesh</p>
+              </div>
+              <span class="stage-tag bg-pink">PANDAL</span>
+            </article>
+
+            <article data-testid="row-schedule-2" class="schedule-row" data-stage="KAYAL">
+              <time class="schedule-time">12:00</time>
+              <div>
+                <h3 class="font-display schedule-title">Listening to the backwaters</h3>
+                <p class="schedule-speaker">A live oral history walk</p>
+              </div>
+              <span class="stage-tag bg-blue">KAYAL</span>
+            </article>
+
+            <article data-testid="row-schedule-3" class="schedule-row" data-stage="KADAL">
+              <time class="schedule-time">14:00</time>
+              <div>
+                <h3 class="font-display schedule-title">How to print a small book</h3>
+                <p class="schedule-speaker">Workshop with Paper Moon Press</p>
+              </div>
+              <span class="stage-tag bg-yellow">KADAL</span>
+            </article>
+
+            <article data-testid="row-schedule-4" class="schedule-row" data-stage="PANDAL">
+              <time class="schedule-time">16:00</time>
+              <div>
+                <h3 class="font-display schedule-title">Letters that refuse to sit still</h3>
+                <p class="schedule-speaker">Anita Nair · M. Mukundan</p>
+              </div>
+              <span class="stage-tag bg-pink">PANDAL</span>
+            </article>
+
+            <article data-testid="row-schedule-5" class="schedule-row" data-stage="KAYAL">
+              <time class="schedule-time">18:30</time>
+              <div>
+                <h3 class="font-display schedule-title">The night remembers: a reading</h3>
+                <p class="schedule-speaker">Collective reading & music</p>
+              </div>
+              <span class="stage-tag bg-blue">KAYAL</span>
+            </article>
+
+            <article data-testid="row-schedule-6" class="schedule-row" data-stage="KADAL">
+              <time class="schedule-time">20:00</time>
+              <div>
+                <h3 class="font-display schedule-title">Afterwords / after-rain</h3>
+                <p class="schedule-speaker">DJs, poets, whoever stayed</p>
+              </div>
+              <span class="stage-tag bg-coral">KADAL</span>
+            </article>
+          </div>
+
+          <div class="program-footer">
+            <p class="footer-note">Full programme drops December 2026</p>
+            <button data-testid="button-program-register" data-modal="register" class="button-secondary">
+              Get the first word <i data-lucide="mail"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 / Book Fair Section -->
+      <section id="fair" class="section-shell grid-fair">
+        <div class="fair-poster-wrap">
+          <img src="assets/INDIE_1786201107738.png" alt="Indie poster collage artwork" class="fair-poster-img" />
+          <p class="poster-caption">Field note / Book fair poster wall</p>
+        </div>
+        <div>
+          <p class="eyebrow">05 / The book fair</p>
+          <h2 class="section-title">Small presses.<br /><span class="text-pink">Big weather.</span></h2>
+          <p class="fair-description">Come find handmade books, Malayalam classics, wild translations, risograph prints and the kind of zine you cannot explain to your group chat.</p>
+          <div class="fair-btn-group">
+            <button data-testid="button-publishing" data-modal="publishing" class="button-ink">
+              Register a press <i data-lucide="plus"></i>
+            </button>
+            <button data-testid="button-stall" data-modal="stall" class="button-secondary">
+              Book a stall <i data-lucide="arrow-up-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 / Membership Section -->
+      <section id="membership" class="section-membership">
+        <div class="section-shell">
+          <div class="grid-membership">
+            <div>
+              <p class="eyebrow">06 / Belong</p>
+              <h2 class="section-title">Keep the<br /><span class="text-pink">pages moving.</span></h2>
+              <p class="membership-subtext">Membership is an invitation to stay close: early access, a small annual parcel of good things, and a hand in shaping what comes next.</p>
+              <button data-testid="button-membership-details" data-modal="member" class="scroll-link-btn mt-8 text-ink">
+                Membership desk <i data-lucide="arrow-down-right"></i>
+              </button>
+            </div>
+            <div class="membership-cards-grid">
+              <div class="paper-card plan-card">
+                <p class="plan-num text-pink">01 / FRIEND</p>
+                <h3 class="font-display plan-price">₹750</h3>
+                <p class="plan-desc">For the curious reader.</p>
+              </div>
+              <div class="pink-card plan-card">
+                <p class="plan-num text-yellow">02 / FOUNDER</p>
+                <h3 class="font-display plan-price">₹5,000</h3>
+                <p class="plan-desc opacity-75">For the ones who make room.</p>
+              </div>
+              <div class="yellow-card plan-card">
+                <p class="plan-num text-ink">03 / ANNUAL</p>
+                <h3 class="font-display plan-price">₹1,800</h3>
+                <p class="plan-desc">For a year of stories.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 / Gallery / Field Notes -->
+      <section id="gallery" class="section-shell">
+        <div class="section-header-row">
+          <div>
+            <p class="eyebrow">07 / Field notes</p>
+            <h2 class="section-title">Before the<br /><span class="text-pink">first word.</span></h2>
+          </div>
+          <a data-testid="link-instagram" href="https://instagram.com" target="_blank" rel="noreferrer" class="button-ink desktop-only">
+            <i data-lucide="instagram"></i> Follow the trail
+          </a>
+        </div>
+
+        <div class="gallery-grid">
+          <div data-testid="tile-gallery-boat" class="photo-tile photo-tile-1"><span>A boat to the venue</span></div>
+          <div data-testid="tile-gallery-wall" class="photo-tile photo-tile-2"><span>Posters after rain</span></div>
+          <div data-testid="tile-gallery-ink" class="photo-tile photo-tile-3"><span>Ink on a thumb</span></div>
+          <div data-testid="tile-gallery-page" class="photo-tile photo-tile-4"><span>The page turns</span></div>
+        </div>
+      </section>
+
+      <!-- 08 / Media Room Section -->
+      <section id="media" class="bg-yellow">
+        <div class="section-shell grid-media">
+          <div>
+            <p class="eyebrow">08 / Media room</p>
+            <h2 class="section-title">Hear what<br /><span class="text-pink">is coming.</span></h2>
+            <p class="media-subtext">Press notes, downloadable marks, last year’s conversations and the Kakhaga radio hour. For stories about stories, write to our media desk.</p>
+            <button data-testid="button-media-kit" data-modal="contact" class="button-ink mt-7">
+              Ask for the media kit <i data-lucide="external-link"></i>
+            </button>
+          </div>
+          <div class="ink-card radio-card">
+            <div class="radio-header">
+              <span class="radio-label text-blue">KAKHAGA RADIO / 001</span>
+              <i data-lucide="play"></i>
+            </div>
+            <h3 class="font-display radio-title">Why do we<br /><i>gather?</i></h3>
+            <div class="radio-play-area">
+              <button data-testid="button-play-radio" id="button-play-radio" class="play-btn" aria-label="Play radio clip">
+                <i data-lucide="play"></i>
+              </button>
+              <span class="radio-meta">12 min · conversation with the organisers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 / Sponsors Section -->
+      <section id="sponsors" class="section-shell">
+        <div class="grid-sponsors">
+          <div>
+            <p class="eyebrow">09 / In good company</p>
+            <h2 class="section-title">Made possible<br /><span class="text-pink">together.</span></h2>
+          </div>
+          <div>
+            <p class="sponsors-subtext">Kakhaga is independent by design. Our friends in print, food, travel, books and culture help us keep tickets generous and the gates open.</p>
+            <div class="sponsors-grid">
+              <div class="sponsor-tile font-display">Paper Moon</div>
+              <div class="sponsor-tile font-display">Azhimukham</div>
+              <div class="sponsor-tile font-display">Kochi Design Week</div>
+              <div class="sponsor-tile font-display">The Reading Room</div>
+              <div class="sponsor-tile font-display">Muziris Project</div>
+              <div class="sponsor-tile font-display">Good Earth</div>
+              <div class="sponsor-tile font-display">Open Library</div>
+              <div class="sponsor-tile font-display">Your name here</div>
+            </div>
+            <button data-testid="button-sponsor" data-modal="contact" class="scroll-link-btn mt-6 text-pink">
+              Become a festival friend <i data-lucide="arrow-up-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 / SSRO Section -->
+      <section id="ssro" class="bg-coral">
+        <div class="section-shell grid-ssro">
+          <div>
+            <p class="eyebrow">10 / Open proposal</p>
+            <h2 class="section-title">Stories belong<br /><span class="text-cream">everywhere.</span></h2>
+            <p class="ssro-subtext">The SSRO proposal invites libraries, schools, resident groups and community spaces to host a Kakhaga conversation of their own. A reading under a tree counts.</p>
+            <button data-testid="button-ssro" data-modal="contact" class="button-ink mt-8">
+              Read the SSRO proposal <i data-lucide="external-link"></i>
+            </button>
+          </div>
+          <div class="ssro-card">
+            <p class="ssro-badge">Proposal / 2027</p>
+            <h3 class="font-display ssro-heading">A room,<br />a reader,<br /><span class="text-pink">a beginning.</span></h3>
+            <div class="ssro-footer">Download brief · 3 pages</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 / Contact Section -->
+      <section id="contact" class="bg-ink text-cream">
+        <div class="section-shell grid-contact">
+          <div>
+            <p class="eyebrow text-blue">11 / Find us</p>
+            <h2 class="section-title">See you<br /><span class="text-yellow">by the water.</span></h2>
+            <div class="contact-links">
+              <a data-testid="link-email" href="mailto:hello@kakhaga.in" class="contact-item">
+                <i data-lucide="mail"></i> hello@kakhaga.in
+              </a>
+              <a data-testid="link-whatsapp" href="https://wa.me/919876543210" target="_blank" rel="noreferrer" class="contact-item">
+                <i data-lucide="message-circle"></i> WhatsApp the festival desk
+              </a>
+              <p class="contact-item align-top">
+                <i data-lucide="map-pin"></i> Old Boat Jetty, Alappuzha<br />Kerala 688001, India
+              </p>
+            </div>
+            <div class="contact-btn-group">
+              <button data-testid="button-contact" data-modal="contact" class="button-secondary">
+                Write to us <i data-lucide="send"></i>
+              </button>
+              <button data-testid="button-footer-ticket" data-modal="ticket" class="button-primary">
+                Book a ticket <i data-lucide="ticket"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <div class="map-grid-overlay"></div>
+            <div class="map-pin-box">
+              <p class="map-pin-label">You are here</p>
+              <h3 class="font-display map-pin-title">Alappuzha<br /><i>backwaters</i></h3>
+            </div>
+            <div class="map-dot"></div>
+            <span class="map-coords">9°29' N · 76°20' E</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <span class="font-display footer-logo">Kakhaga / 2027</span>
+        <span class="footer-tagline">A literature festival from Kerala, with love.</span>
+        <button data-testid="button-back-top" id="button-back-top" class="back-top-btn">
+          Back to top <i data-lucide="circle-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+
+    <!-- Dynamic Modal System -->
+    <div id="modal-backdrop" class="modal-backdrop hidden" role="presentation">
+      <div id="modal-panel" class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Kakhaga / 2027</p>
+            <h2 id="modal-title" class="font-display modal-title-text">Modal Title</h2>
+          </div>
+          <button data-testid="button-close-modal" id="button-close-modal" aria-label="Close dialog" class="modal-close-btn">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <form id="modal-form" class="modal-body-form">
+          <p id="modal-desc" class="modal-desc-text">Modal description goes here...</p>
+          
+          <label class="form-group">
+            <span class="form-label">Your name</span>
+            <input data-testid="input-name" id="input-name" name="name" class="form-input" required placeholder="Write it as it appears on your book" />
+          </label>
+
+          <label class="form-group">
+            <span class="form-label">Email address</span>
+            <input data-testid="input-email" id="input-email" name="email" class="form-input" required type="email" placeholder="you@somewhere.in" />
+          </label>
+
+          <div id="modal-extra-fields"></div>
+
+          <button data-testid="button-submit-modal" id="button-submit-modal" class="button-primary w-full" type="submit">
+            <span id="submit-btn-text">Submit</span> <i data-lucide="send"></i>
+          </button>
+        </form>
+
+        <div id="modal-success" class="modal-success-box hidden">
+          <div class="success-icon-wrap">
+            <i data-lucide="check"></i>
+          </div>
+          <p id="success-msg" class="success-msg-text">Thank you. We have your note. Look for a confirmation in your inbox soon.</p>
+          <button data-testid="button-done-modal" id="button-done-modal" class="button-ink mt-7">
+            Back to the festival <i data-lucide="arrow-up-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Native JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
