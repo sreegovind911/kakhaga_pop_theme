@@ -1,17 +1,16 @@
 import express, { type Express } from "express";
 import cors from "cors";
-import { pinoHttp } from "pino-http";
+import pinoHttp from "pino-http";
 import type { IncomingMessage, ServerResponse } from "http";
 import router from "./routes";
 import { logger } from "./lib/logger";
 
 const app: Express = express();
 
-// Handle ESM/CJS default export interop for pino-http across different bundlers/environments (e.g. Vercel)
-const pinoMiddleware = typeof pinoHttp === "function" ? pinoHttp : (pinoHttp as any)?.default || pinoHttp;
+const pinoHandler = typeof pinoHttp === "function" ? pinoHttp : (pinoHttp as any)?.default || pinoHttp;
 
 app.use(
-  (pinoMiddleware as typeof pinoHttp)({
+  pinoHandler({
     logger,
     serializers: {
       req(req: IncomingMessage & { id?: unknown }) {
